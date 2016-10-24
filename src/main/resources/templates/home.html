@@ -6,7 +6,18 @@
 </head>
 <body>
 
+<a href="/">All |</a>
+<a href="/?category=Furniture">Furniture |</a>
+<a href="/?category=Alcohol">Alcohol |</a>
+<a href="/?category=Toiletries">Toiletries |</a>
+<a href="/?category=Shoes">Shoes |</a>
+<a href="/?category=Food">Food |</a>
+<a href="/?category=Jewlery">Jewlery</a>
+
+
 <form action="/" method="get"></form>
+
+
 
 <table>
 
@@ -23,8 +34,8 @@
     {{#purchases}}
 
     <tr>
-        <td>{{name}}</td>
-        <td>{{email}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
         <td>{{category}}</td>
         <td>{{creditCard}}</td>
         <td>{{cvv}}</td>

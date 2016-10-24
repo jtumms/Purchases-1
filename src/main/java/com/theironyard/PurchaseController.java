@@ -51,11 +51,19 @@ public class PurchaseController {
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String home (Model model, Purchase purchase, Customer customer){
-        Iterable<Purchase> plist = purchases.findAll();
+    public String home (Model model, String category){
+        Iterable<Purchase> plist;
         Iterable<Customer> clist = customers.findAll();
+
+        if(category != null){
+            plist = purchases.findByCategory(category);
+        }
+        else {
+            plist = purchases.findAll();
+        }
+
         model.addAttribute("purchases", plist);
-        model.addAttribute("customers", clist);
+        model.addAttribute("categories", category);
         return "home";
     }
 
