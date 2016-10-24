@@ -22,20 +22,26 @@ public class Purchase {
     @Column(nullable = false)
     int cvv;
 
+    @Column(nullable = false)
+    String category;
+
     @ManyToOne
     Customer customer;
 
-    public Purchase(int id, String date, String creditCard, int cvv, Customer customer) {
-        this.id = id;
+    public Purchase(String date, String creditCard, int cvv, String category, Customer customer) {
         this.date = date;
         this.creditCard = creditCard;
         this.cvv = cvv;
+        this.category = category;
         this.customer = customer;
     }
 
-    public Customer getCustomer (){ return  customer; }
+    public Purchase() {
+    }
 
-    public Customer setCustomer () { this.customer = customer; }
+//    public Customer setCustomer () { this.customer = customer; }
+
+    public Customer getCustomer (){ return  customer; }
 
     public int getId() {
         return id;
@@ -68,4 +74,8 @@ public class Purchase {
     public void setCvv(int cvv) {
         this.cvv = cvv;
     }
+
+    public void setCategory (String category){ this.category = category; }
+
+    public String getCategory () { return category; }
 }

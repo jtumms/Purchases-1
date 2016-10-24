@@ -6,5 +6,32 @@
 </head>
 <body>
 
+<form action="/" method="get"></form>
+
+<table>
+
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Category</th>
+        <th>Credit Card</th>
+        <th>CVV</th>
+        <th>Date</th>
+    </tr>
+
+
+    {{#purchases}}
+
+    <tr>
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{category}}</td>
+        <td>{{creditCard}}</td>
+        <td>{{cvv}}</td>
+        <td>{{date}}</td>
+    </tr>
+    {{/purchases}}
+
+</table>
 </body>
 </html>
