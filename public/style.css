@@ -1,3 +1,13 @@
+h1{
+  font-family: arial, sans-serif;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 body{
     background: linear-gradient(to right, #25c481, #25b7c4);
 }
@@ -23,6 +33,7 @@ th{
   font-size: 18px;
 }
 
+
 td{
   padding: 15px;
   text-align: left;
@@ -30,9 +41,11 @@ td{
   font-weight: 300;
   font-size: 15px;
 }
-th {
-   background-color:
+ th {
+   text-transform: uppercase;
+   background-color: rgba(245, 245, 245, 0.64);
 }
+
 tr:nth-child(even) {
     background-color: rgba(245, 245, 245, 0.30);
 }
@@ -40,20 +53,23 @@ tr:hover{
     background-color: rgba(245, 245, 245, 0.64);
 }
 
-.buttons {
-    background: #428BCA;
+button{
+    background: rgba(114, 42, 84, 0.13);
     color: #fff;
     font-family: arial, sans-serif;
-    font-size: 20px;
+    font-size: 12px;
     height: 60px;
-    width: 150px;
+    width: 75px;
     line-height: 60px;
     margin: 25px 25px;
     text-align: center;
     border: 0;
     transition: all 0.3s ease 0s;
+    border-radius: 18%;
 }
-
-.buttons:hover {
-    background: #722a54;
+.buttonH {
+    text-align: center;
+}
+button:hover {
+    background: #086f77;
 }
